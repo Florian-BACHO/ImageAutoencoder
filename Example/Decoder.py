@@ -5,7 +5,7 @@ from AbstractDecoder import *
 
 class Decoder(AbstractDecoder):
     # Override the layers construction function
-    def constructLayers(self, input):
+    def constructLayers(self, input, isTraining):
         upsample1 = tf.image.resize_images(input, size=(7,7), \
                                            method=tf.image.ResizeMethod.NEAREST_NEIGHBOR)
         # Now 7x7x16

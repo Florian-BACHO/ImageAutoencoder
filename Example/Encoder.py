@@ -5,7 +5,7 @@ from AbstractEncoder import *
 
 class Encoder(AbstractEncoder):
     # Override the layers construction function
-    def constructLayers(self, input):
+    def constructLayers(self, input, isTraining):
         conv1 = tf.layers.conv2d(input, filters=32, kernel_size=(3,3), padding='same', \
                                  activation=tf.nn.relu)
         # Now 28x28x32

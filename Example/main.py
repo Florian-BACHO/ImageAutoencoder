@@ -25,7 +25,7 @@ if __name__ == "__main__":
         encoder = Encoder(input)
 
     with tf.variable_scope("Decoder"):
-        decoder = Decoder(input, encoder, LEARNING_RATE)
+        decoder = Decoder(input, encoder, learning_rate=LEARNING_RATE)
 
     init = tf.global_variables_initializer()
 
