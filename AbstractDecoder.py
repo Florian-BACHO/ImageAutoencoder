@@ -3,7 +3,7 @@ import tensorflow as tf
 class AbstractDecoder:
     def __init__(self, input, encoder, learning_rate=0.01):
         self.input = input
-        self.isTraining = tf.placeholder(tf.bool, ())
+        self.isTraining = encoder.isTraining
 
         self.output = self.constructLayers(encoder.output, self.isTraining)
 
